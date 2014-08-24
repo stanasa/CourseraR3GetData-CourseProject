@@ -45,8 +45,9 @@ download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUC
 #Examine the readme file
 readme <- readLines(unz(tmp, "UCI HAR Dataset/README.txt"))
 grep("The dataset includes the following files:", readme)
+readme[26:length(readme),]
 
-#@ Extract relevant feature names from the features list file.
+# Extract relevant feature names from the features list file.
 features <- read.table(unz(tmp, "UCI HAR Dataset/features.txt"), stringsAsFactors=F)
 dim(features)
 features.subset <- features[grep("mean\\(\\)-.$|-mean\\(\\)$|std\\(\\)-.$|-std\\(\\)$",features$V2, value=F),]
@@ -55,8 +56,7 @@ dim(features.subset)
 #Extract activity labels w/ names and numeric codes. 
 activitylabels <- read.table(unz(tmp, "UCI HAR Dataset/activity_labels.txt"))
 
-Get the actual data
-
+#Get the actual data
 train.data1 <- read.table(unz(tmp, "UCI HAR Dataset/train/X_train.txt"))
 train.data2 <- read.table(unz(tmp, "UCI HAR Dataset/train/subject_train.txt"))
 train.data3 <- read.table(unz(tmp, "UCI HAR Dataset/train/y_train.txt"))
@@ -65,7 +65,7 @@ test.data1 <- read.table(unz(tmp, "UCI HAR Dataset/test/X_test.txt"))
 test.data2 <- read.table(unz(tmp, "UCI HAR Dataset/test/subject_test.txt"))
 test.data3 <- read.table(unz(tmp, "UCI HAR Dataset/test/y_test.txt"))
 
-
+#Cursory look at data:
 dim(train.data1)
 dim(train.data2)
 dim(train.data3)
