@@ -123,6 +123,7 @@ dim(data1.1)
 data_final <- cbind(data2.1, data3.1, data1.1)
 names(data_final)[1] <- "SubjectID"
 names(data_final)[2] <- "Activity"
+data_final <- as.data.table(data_final) ##Convert to datatable for easy processing
 
 #Melt to obtain a tidy long format, then aggregate by Subject, Activity and Measurement,
 # taking the mean for each measurement/Subject/Activity
