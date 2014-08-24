@@ -7,27 +7,28 @@
  The goal behind this project was to process biometric data from sensors placed 
  on 30 subjects, engaged in 6 labeled activities. 561 data vectors were stored.   
  The original data were modified in the following ways:
- 1) Merged the training and test data
- 2) Extracted only mean and std measurement data from the file,
- 3) Used the activity labels provided to enrich the data
- 4) Created human-friendly labels for the data columns
+ 
+ 1) Merged the training and test data  
+ 2) Extracted only mean and std measurement data from the file,  
+ 3) Used the activity labels provided to enrich the data  
+ 4) Created human-friendly labels for the data columns  
  5) Saved average values for each activity and each subject and each measure in
- a file labeled tidyresult.txt
+ a file labeled tidyresult.txt  
  
  For a more detailed explanation, see the comments in the source code provided.
  
  For clarity, create a:  
  
- a) CodeBook.md -- listing all variables in a useful way.
- b) README.md -- a quick listing of how the script works. 
+ a) CodeBook.md -- listing all variables in a useful way.  
+ b) README.md -- a quick listing of how the script works.   
 
 
 ## The dataset includes the following files:
 
-- 'README.md' - a helpfile included to aid in reproducibility of the output.
-- 'run_analysis.R' - the file used to produce the output file.
-- 'tidyresult.txt' - the data file, space delimited.
-- 'CodeBook.md' - the file you are currently browsing. 
+- 'README.md' - a helpfile included to aid in reproducibility of the output.  
+- 'run_analysis.R' - the file used to produce the output file.  
+- 'tidyresult.txt' - the data file, space delimited.  
+- 'CodeBook.md' - the file you are currently browsing.   
 
 
 
