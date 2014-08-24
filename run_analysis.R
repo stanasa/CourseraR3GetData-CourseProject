@@ -32,7 +32,7 @@ archiveinwd <- file.exists("getdata-projectfiles-UCI HAR Dataset.zip")
 
 if(archiveinwd) {
      #set path to read pre-downloaded archive
-     tmp <- "/Data/getdata-projectfiles-UCI HAR Dataset.zip" 
+     tmp <- "getdata-projectfiles-UCI HAR Dataset.zip" 
 } else { #if file not found in working dir, download to temp file
 tmp <- tempfile()
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", tmp,
